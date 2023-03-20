@@ -40,34 +40,31 @@ class RoundedSquare  implements Shape{
 }
 
 abstract class AbstractShapeFactory{
-    abstract getShape(type:string):Shape;
+    abstract getShape():Shape;
+    abstract getRoundedShape():Shape;
 }
 
-class ShapeFactory extends AbstractShapeFactory{
-    getShape(type:string): Shape {
-        if(type == 'rectangle'){
+class RectangleShapeFactory extends AbstractShapeFactory{
+    getRoundedShape(): Shape {
+       return new RoundedRectangle()
+    }
+    getShape(): Shape {
             return new Rectangle();
-        }
-        if(type == 'square'){
+ 
+    }
+}
+
+
+
+class SquareShapeFactory extends AbstractShapeFactory{
+    getRoundedShape(): Shape {
+       return new RoundedSquare
+    }
+    getShape(): Shape {
             return new Square();
-        }
-        throw new Error("Method not implemented.");
+ 
     }
 }
-
-class RoundedShapeFactory extends AbstractShapeFactory{
-    getShape(type:string): Shape {
-        if(type == 'rectangle'){
-            return new RoundedRectangle();
-        }
-        if(type == 'square'){
-            return new RoundedSquare();
-        }
-        throw new Error("Method not implemented.");
-    }
-}
-
-
 
 
 
