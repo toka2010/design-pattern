@@ -64,3 +64,4 @@ State Pattern: It is great when a developer wants to avoid primitive if/else sta
 Instead of, extracting logic to separate classes and let our context object delegate the behavior 
 to the methods implemented in-state class. Besides, we can leverage transitions between the states, 
 where one state can alter the state of the context.
+*/
