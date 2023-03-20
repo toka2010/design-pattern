@@ -37,3 +37,13 @@ class VectorRender implements Renderer {
 const rasterRender = new RasterRenderer();
 const circle = new Circle(rasterRender, 4);
 circle.draw();
+
+
+/**
+ * . Bridge Pattern
+ * When we have interface hierarchies in both interfaces as well as implementations,
+  then the bridge design pattern is used to decouple the interfaces from the 
+  implementation and to hide the implementation details from the client programs.
+  The implementation of the bridge design pattern follows the notion of preferring 
+  composition over inheritance.
+ */

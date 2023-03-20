@@ -19,7 +19,6 @@ export class PersonBuilder {
 
   getLives() {
     return new PersonAddressBuilder(this.person);
-    
   }
 
   build() {
@@ -55,6 +54,14 @@ const person = per
 
 console.log(person.toString());
 
-
-// Builder pattern aims to “Separate the construction of a complex object from its representation 
+// Builder pattern aims to “Separate the construction of a complex object from its representation
 // so that the same construction process can create different representations.”
+
+/**
+ * 
+ * Builder Pattern
+  The builder pattern was introduced to solve some of the problems with factory and abstract Factory design 
+  patterns when the object contains a lot of attributes. This pattern solves the issue with a large number of
+  optional parameters and inconsistent state by providing a way to build the object step-by-step and provide a
+  method that will actually return the final Object.
+ */
